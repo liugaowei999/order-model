@@ -21,6 +21,7 @@ public interface IUnionOrderRepository<T,R> {
     R save(T orderEntity);
 
     default String getByOrderNo(String orderNo) {
+        // For测试 ：url: 中台服务地址
         RequestContext requestContext = new RequestContext("http://localhost:8096/order/selectOne?orderNo=" + orderNo);
 //        JSONObject body = new JSONObject();
 //        body.put("id", id);
